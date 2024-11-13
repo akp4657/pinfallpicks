@@ -36,7 +36,8 @@ app.use(bodyParser.json({
 }));
 
 // Endpoints for FE
-app.get('/', user_service.login);
+app.post('/login', user_service.login);
+app.post('/addUser', user_service.addUser);
 
 
 // Optional fallthrough error handler
